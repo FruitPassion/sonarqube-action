@@ -33,10 +33,19 @@ inputs:
   login:
     description: "Login or authentication token of a SonarQube user."
     required: true
-  password:
-    description: "Password that goes with the sonar.login username. This should be left blank if an authentication token is being used."
-    required: false
   encoding:
     description: "Encoding of the source code."
     required: false
     default: "UTF-8"
+  exclusions:
+    description: "Comma-separated paths to files to be excluded from the analysis."
+    required: false
+    default: ""
+  inclusions:
+    description: "Comma-separated paths to files to be included in the analysis."
+    required: false
+    default: ""
+  pythonv:
+    description: "Python version."
+    required: false
+    default: "3"
